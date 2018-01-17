@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title:string=("US Time Zone Display");
+  time= new Date();
+  zone='UTC';
+  onButtonClick(new_zone){
+    if(new_zone=="clear"){
+      this.zone='UTC';
+    }else{this.zone=new_zone}
+  }
 }
